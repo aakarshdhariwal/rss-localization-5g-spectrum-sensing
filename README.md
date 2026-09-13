@@ -242,8 +242,8 @@ both folders to your MATLAB path first:
 ```matlab
 addpath('code/localization', 'code/spectrum_sensing', 'code/ofdm');
 
-mse_test           % MSE method: sensor grid, localization error, and REM reconstruction
-LIvE_algorithm      % LIvE method: constrained-optimization localization
+mse_test          % MSE method: sensor grid, localization error, and REM reconstruction
+LIvE_algorithm    % LIvE method: constrained-optimization localization
 ```
 
 To reproduce the OFDM-based localization result (Key Results, above), open
