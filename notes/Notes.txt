@@ -1,0 +1,204 @@
+
+To Do:
+1. Study Kalman Filtering Method. Not to be implemented.
+2 Study Cooperative Sensing. Now.
+3 Hidden node problem as a consequence in distributed networks: This is to overcome the hidden node problem, i.e., a
+SU sensor hears very weak signal from the primary transmitter but can strongly
+interfere the primary receiver if it transmits (here the primary receiver looks like a
+hidden node). To avoid such interference, one solution is to require the SU sensor
+to have the capability to sense the presence of the primary signal at very low SNR.
+4 Why SS is different for narrowband and wideband? How is it carried out for both? Does it really matter for my work?
+5 Formulate problem description for mid term defense... (In review)
+6 Code Kalman filtering in detail. In progress. closed for now.
+7 An idea does geometry of SU affect active transmitter localisation? lets see.
+8 For writing the thesis before stating we use RSS method, look into literature about the other localisation schemes and mention them such that it becomes a flow towards use of RSS.
+9 Introduce different types of trnamitters such as base station, emiitters and their functionality in short sentences.
+
+
+Discussion 25.05.2023
+
+- PLot figures for the Adaptive Iterative method and MSE Based method.
+- Fix LIVe Algorithm.
+- Include spatially correlated shadowing in RSS measurements calculateion and compare the rrsults.
+- Employ Kalman Filtering Method for comparison.
+- Deadline 1st week of June.
+- Ask what is the ultimate goal of the value of the thesis.
+- Ask does my ideas match the goal of the thesis or what do you need. (Measurable results, what he needs?)
+
+
+Discussion 31.05.2023
+
+- Compare the 3-4  (MSE, Adaptive Iteration, LIvE and Kalman filtering) algortihms performance in terms of Tx position error, RSS prediction error, MSE error based on Tx points and REM construction.
+
+- TRy to implement the LIvE algorithm correctly and look out for errors. 
+
+- The ultimate goal of the thesis is to produce REM maps and implement emitter based localisation algorithms and produce REM Maps conforming to 5G NR technicalities.
+The 5G NR requirements, I need to figure them out and look out for papers and do literature review for the final part.
+- Idea: Should I also compare the performance of the localisation algorithms after including spatially correlated log normal shadowing effenct for slow fading scenarios. Right now the implementation includes only log normal shadowing modeled using Gaussain noise and averaged over Number of samples to reduce the imapct of random noise.
+
+
+Discussion with Aurelian:
+
+Articles to read to gain idea and inspiration.
+
+!!! Very important !!!
+
+https://www.fcc.gov/wireless/bureau-divisions/mobility-division/35-ghz-band/35-ghz-band-overview
+
+https://www.ecfr.gov/current/title-47/chapter-I/subchapter-D/part-96 - see Subpart F – Spectrum Access System
+
+https://www.ericsson.com/en/blog/6/2022/cbrs-growing-pains-and-progress
+
+
+
+
+
+Paper to read for 5G and REM for more literature eview and SoTA techniques for REM?
+
+1 . M. Suchanski, P. Kaniewski, J. Romanik, E. Golan, K. Zubel, Radio environment maps for military cognitive networks: Deployment of
+sensors vs. map quality, in: 2019 International Conference on Military Communications and Information Systems, ICMCIS, 2019, pp. 1–6,
+http://dx.doi.org/10.1109/ICMCIS.2019.8842720. (for sensor deployment and number of sensors for REM)
+(Does NOT generalised deployment but for NATO specifically)
+
+2. G. Boccolini, G. Hernández-Peñaloza, B. Beferull-Lozano, Wireless sensor network for spectrum cartography based on kriging interpolation,
+in: 2012 IEEE 23rd International Symposium on Personal, Indoor and Mobile Radio Communications - (PIMRC), 2012, pp. 1565–1570,
+http://dx.doi.org/10.1109/PIMRC.2012.6362597, 1570.(Kriging interpolation for number of sensor deployment).
+
+3.  S. Üreten, A. Yongaçoğlu, E. Petriu, A comparison of interference cartography generation techniques in cognitive radio networks, in: 2012 IEEE
+International Conference on Communications, ICC, 2012, pp. 1879–1883, http://dx.doi.org/10.1109/ICC.2012.6364111. (To read about interference cartgraphy, basic rem methods).
+
+4 S. Alfattani, A. Yonzacoglu, Indirect methods for constructing radio environment map, in: 2018 IEEE Canadian Conference on Electrical Computer
+Engineering, CCECE, 2018, pp. 1–5, http://dx.doi.org/10.1109/CCECE.2018.8447654 (RSS method for rem )
+
+5. Paweł Kryszkiewicz, Adrian Kliks, Łukasz Kułacz, Hanna Bogucka, George P. Koudouridis, Marcin Dryjański, Context-based spectrum sharing in
+5 g wireless networks based on radio environment maps, Wirel. Commun. Mob. Comput. (2018) http://dx.doi.org/10.1155/2018/3217315. (REM in 4G and 5G).
+
+
+7. I. Kakalou, K. Psannis, S.K. Goudos, T.V. Yioultsis, N.V. Kantartzis, Y. Ishibashi, Radio environment maps for 5 g cognitive radio network, in:
+2019 8th International Conference on Modern Circuits and Systems Technologies, MOCAST, 2019, pp. 1–4, http://dx.doi.org/10.1109/MOCAST.
+2019.8741554.
+
+8. J. Riihijarvi, P. Mahonen, and S. Sajjad, “Influence of transmitter configurations on spatial statistics of radio environment maps,” in Personal,
+Indoor and Mobile Radio Communications, Sep 2009, pp. 853 –857. (This paper discusses about how trx position,terrain roughness, and
+assumed path loss effects the efficacy of the interpolated field. Meaning how the fading, placement and RSS affect interpolation and trx location for REM, use for report writing and understanding how to explain interpolation is imp for my thesis and trx location estimation. )
+
+
+
+
+Doubts:
+
+1 What is meant by, One chapter describing the overall concept of a dedicated network of sensors (multi-agent system) used for collaborative RF emission sensing?
+Ans. it means sampling the sensors in a grid like structure to perform the given functionality. It includes sensor structure, why we use it, their basic configuration for example positioning, antenna structure, communication characteristics, geometry, signal processing etc.
+
+2 How can I research about this, One chapter about modelling the PHY of a sensing receiver node based on energy and power detection/analysis + one emitter (potential jammer profile) in MATLAB? is it explaning why I used certain paprameters for my system model or something else?
+Any paper that suggests this?
+
+3 DOes the data collected for RSS measurements change in frequency and time for REM construction, and if so how cn that be modeled or thought about?
+Also does time sampling of a waveform can be considered for RSS calculations in a provided bandwidth, and sampled discrete power can be then used for RSS measurement calculations? if this is true, then how can we extend it for OFDM signals (time and frequency based)?
+
+4 The code for the LIvE Algo from the guy, the Xsens and Ysens is the area where the position is actually for the TRX. He calculates the RSS of sensor measurements i.e within the area of Sensors actually placed and the actual TRX location, and also calculates the RSS data for the whole grid which is the total area where lies the possibility of the tRX without knowing it before hand. Then he finds out where the TRX could lie within the whole Xgrid and Ygrid after estimation the RSS measurements with X sens and X grid points for interpolation, meaning to find the estimated measurement in the whole grid with respect to the sesnors but not the TRX. Then for LIvE Algo interpolation he finds the error in the measurement points and finds the possible location points where the TRX could lie in the grid and then calculates the out power measurements with those points and the grid points. 
+
+In my case I calculate RSS at every sensor location which is the same as grid locations. And then use just the 4 sensors with max power to estimate the location using all the alogirthms to do interpolation. So the doubt is, is my method and his way of calculating things similar in terms of interpolation and RSS measurement calculation to justify the results?
+
+5 Why didn't these guys talk about use of frequencies of in which bandwidth they contruct REM but only talk about rx and tx positions?
+
+6. Clearly define the channel propagation model that we employ for the first half? 
+currently it is the Urban environment with shadowing and with some refelctions (multipath fading), similar to the path loss model as described in the paper but it should also be in correspondence to our later structure as in 5G with high frequencies and bandwidth.
+
+7. what role does the bandwidth play in channel modelling, REM construction and signal processing for 5G scenarios? FInd out and build a story out of it for presentation and report.
+
+8. Can I change the permutaions used in MSE code and we see how well it performs when we use less dataor permutations as we include more sensors?
+
+9. The part of the goal of our thesis aprt from localising the trx position is also to genrate REM map, but we never actually discussed about the REM quality metrics in general or even if we want to include them in our results? What are your thoughts?
+
+10. Any threshold value for TRX power that we must take into account. For ex primary signal detection power is - 114dBm by FCC. Should we consider such power levels too?
+
+11. How is trx localisation related to spectrum sesning?
+
+12. What about introducing Tx power thresholding to identify if it is a genuine transmitter or an interferer? In an alleged 2 trx scenario one TX and other interferer? Later!!!
+
+13. It is a good point to research and write about just normal transmitters such as BS, mobile terminals, TV Bs etc and also about jammers or any kind of interferers in the network in the second chapter of the network modeling...
+
+14.  Density of sensors? is that a factor that imapcts localisation do simulation and see. Yes, done.
+
+15. What kind of power levels should we expect in RSS measurements? How to figure out the sensitivity of the receivers?
+
+16. REM update rate can be understood as a means to update REMs not just in time and frequency but also in terms of use case scenarios such as dynamic change in environment from doppler, velocity, low lantency requirements (in V2X), deep fading scenarios etc. ? discuss it with Victor and then write about it. Done.
+
+17. OFDM Realted questions:
+   
+    1. OFDM is multicarrier and frequecy selective scheme. However we don't emply frequency selectivity in a considered bandwidth. So, why is OFDM relevant for the topic? we just use ofdm because it is supported by my trsnamitter.
+    Ans. More symbols to to make scenario stationary and able to detect. Less average power is lost when more symbols are used.
+
+    2. Carrier frequency that I wish to consider is sub 6 GHz maybe 2-5 GHz band as wifi but employ that in Access points?
+    3. Frame format or just symbols which can be related to the frame format?
+    4. I use basic OFDM waveform for simulation purposes but in reality the Trx or an UE will use 5G NR waveform so need to make coherence with that and state my parameters which are simplistic for simulation study but not exactly as in       real world scenario, is that okay?
+    5. Conclusion? Good or bad or just an extended version of the previously employed?
+    6. MIMO Case? ours is SISO Case?
+
+
+
+Meeting 12.07.2023
+
+Discussion on what happened on presentation day. Confusion and feedback regarding results:
+
+- change deployment of sensors and then produce results.
+- Change the area of deployment in a general sense and compare performances.
+- Sensors are dedicated for pur project and are called spectrum analyzer which for our case just sesne the data but could also in actuality do spectrum analysis.
+- Remove the CR concept and focus on DSS and REM relation to DSS.
+- After these results I start focusing on shadowing part between the sensors and how it impacts the localisation.
+- Look out for how the drop in MSE based method comes about for 4-8 sensors initially.
+
+
+OFDM Waveform genration corresponding to 5G NR:
+
+- Synchronization of the sensors with the transmitter is of high importance and received signal strength and data received at the sensors is dependent on the synchronization between the Tx and Rxs. We consider perfect synchronization and timing between the sensors and the TX and assume they all receive perfect signal with characterizing a certain path loss model. However, as synchronization plays an important role in received power at the sensors an error of certain amount should be included in terms of received signal consideering synchronization.
+- Important point ot consider for practival scenario for OFDM are the delays and timing of the signal meant to be received at the sensor nodes.We assume no delays caused by scattering and multipaths. And assume perfect timing.
+
+
+Some notes:
+1. Signal to noise ratio (SNR) is also available, but it is often omitted because RSSI has stronger correlation with the location than SNR.
+
+  
+Final Presentation ideas:
+
+1. Include the figure of flow diagram from the paper : A Survey of the Performance-Limiting Factors of a
+2-Dimensional RSS Fingerprinting-Based IndoorWireless Localization System. The figure is marked via a comment. remove the fingerprinting part 
+3. Take the picture from this paper "Generalized Radio Environment Monitoring for Next Generation Wireless Networks" and use this to explain th state of the art chapter and several use cases for REM in 5G. 
+4. Important question to answer is why is the thesis's goals using RSS measurements captured by sensors using distributed spectrum sensing in a frequency of operation or bandwidth and constrcuting REM using that. Several hundreds of research articles were written about it, so, what is the specific aim that is achieved in this topic? 
+Answer: we use RSS based localization in WSN which are captured using WLAN supporting devices which are almost every device's capability now. We start with selecting two algorithms based on path loss modeling and studied extensively in literature to build fundamentals in the topic. Then use them to construct REM which was also used quite extensively in CR but now as a technology has find its imporatnce in not only CR supprting technologies but also in cellualr and wireless use cases such as UAV, V2X, interference mitigation, realize tnetwork coverage area for operators, using location based services or applications to build a radio map with details like frequencies or channels occupied, data rate usage, changing or varying channel parameters to suffice for an application or use case in 5G networks. Therefore, this thesis builds a bridge for why localization is important for REM construction and answering the question through literature review where and how REM can be used as a supporting tool in 5G networks. 
+
+Note: Use this to breakdown the motivation, background, aims to build a complete picture of the thesis as suggested by Laurenz such that my work is relatable and not questionable.
+
+5. similar scenario as jonas did: present the topic with the help of a picture from yilmaz radio about localization and then REM constrcution. 
+
+6. What i wish to presnt is instead of using individual slides and then explaining the whole story using points and slides, make a flow diagram chain and then use it step by step to introduce my contributions starting with:
+a)  RSS measurements (Done): 1) dedicated sensor network (4,9,25 sensor placement in a grid).
+		      2) system model and parameters used in a hughlighted box to show the model clearly.
+                      2) then presenting the two RSS based algorithms that we wish to compare (MSE and LIvE).
+                      3) then making the flow to system model: where I present the path loss model used.
+                      4) After path loss model I measure the RSS values at each sensor node starting from 4,9... and then short introduction in the flow 
+                         diagram chain in a box to give the MSE solution and methodology (MSE equations and  explain algorithm's working )
+                         Then the result.
+                      5) Same process for LIvE and the result.
+                      6) Compare the two methods using performance metric such as localization error against number of sensor nodes, optimization problem                   			 and computation time in MATLAB and selection of MSE as a on the fly approach for offline localization in the central fusion node 		         or server.
+b) OFDM as a transmitter signal: 1) Basic OFDM waveform to compare localization performance using OFDM signal in MSE method and results (OFDM waveform goes into the flow diagram chain as an extension branch in the system model). explain briefly the result.
+
+c) Correlated shadowing: 1) inclusion of correlated shadowing using Gudmundson model which is described in the flow diagram as next extension and then 			            goes into the details in a new slide about the GUDmundson model, standard deviations and system parameters used. 
+                         2) Then presenting the evaluation results using MSE method.
+
+d) REM introduction: 1) basics of REM using the flow diagram as used in the report consisting of sensor nodes to capture data, sending them to the REM 			        manager to make decisions over it and perform localization or store information regarding channel, waveforms, modulation, spectrum 			occupied as the REM data model uses.
+                     2) Use the REM data model from the spectrum cartography and yilmiz radio papaer to expalin the various contents of REM in general and 			what are the aspects we are limiting our discussion.
+                     3) Next in the flow diagram make a highligh to the discussion of various aspects of REM in 5G use cases as REM now is not only 				limited to CR; use the spectrum cartography and its applicatons diagram and highligh use cases discussed briefly.
+                     4) Estimated REM and true REM results using result from MSE localization and mention clearly that the REMs only show the power levels 			in the area of interest using 40 x 40 resolution in a ( 100 m x 100 m ) grid area. it doesn't show the treu sensor node localtions 			but the radiated power in a omni directional view from the localized transmitter. 
+			As before don't forget to mention what comes next using the flow diagram to make a complete picture. 
+   			
+
+
+e) An idea start with the main contributions and check them as moving along the presentation. 
+
+
+f) one limitation of location based services and positioning is user not complying with sharing their location due to privacy concerns and that makes localization dificult. therefore a REM could help in figuring out the possible locations determined through power map estimations in the defined area for possible location whilst not disclosing the true estimated location but possible locations resulting in classifying spectrum in use, interference in the channels. 
+
+Presentation should consist of motivation picture, what is your motivation include a picture, motivation should include what the problem is stating and what needs to be solved, a broad picture of the motivation which has small narrow points to be taken care of. 
+Block diagram for your process including goals and how you break down your problem statement into smaller steps and be very clear. Including pictures rather than points.  

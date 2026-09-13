@@ -1,0 +1,88 @@
+Introduction
+ 
+ - Start with CR capable devices or WSN use distributed spectrum sensing to get basic or fundamental idea about the spectrum (frequency in use) and also why these technologies are an important aspect of efficient and smart way of utilizing resources such as bandwidth to avoid congestion and avoiding interference in general to dedicated devices.
+- theory about spectrum sensing in general and what its capable of and also realising its use in this project but not the details of spectrum sensing in detail here.
+- then after introducing all this stuff the problem of spectrum use and efficient resource allocation is required and here slowly introduce the concept of REM and then its aspect of tx localization which we talk about for 5G networks.
+- how future networkd will become smater by utilising only necessary info and discarding others for memory and time related concerns.
+
+
+Introduction
+ 
+ - Background and Motivation
+ 
+ - Outline and Contributions: stating the measurable results and methodlogy used for the thesis.
+
+RSS Based Transmitter Localization and REM construction
+
+ - Distributed Spectrum Sensing
+ - REM Construction : Direct and Indirect Methods.
+ - RSS Based Localization and why RSS is a good choice from DOA, TOA and TDOA methods. 
+ - State of the Art Methods : Starting point classical direct methods (Kriging, Kalman Filtering), from REm survey paper, and Deep learning methods.
+
+
+System Model
+ 
+ - Introduction: RF propagation,  algorithms theory, methodology for the algorithms.
+ - Channel Model: fast fading (Multipath) and Shadowing. System Model: detailed view of system model for the algorithms used.
+ - Sensor Network: Trx and Rx sensitivity or model in general.(frequency used, capabilities), include sensor techlogies to be used from the paper A Survey of the Performance-Limiting Factors of a 2-Dimensional RSS Fingerprinting-Based IndoorWireless Localization System (Chapter 4 ). Mention briefly.
+ 
+ - Correlated Shadowing
+      -  Concept
+      - Practical Importance
+      - System Model
+      - Results and discussion
+ - Results and discussion. (REM Here)
+
+
+ 
+OFDM Waveform for Trx Localization
+
+  - OFDM Concept
+  - System Model: OFDM Waveform Generation (DSP chain)
+  - 5G NR based frame structure to include for practical scenarios and future comparative work.
+  - Results and Discussion
+
+REM Applications and Use Cases
+
+ - REM with Doppler (mobile scenario)
+ - REM with mmWave and URLLC applications
+ - REM application based update rate
+ - REM Synchronization (not sure).
+ - REM for security.
+
+Conclusions and future work
+
+References
+
+
+
+
+Note:
+
+In RSS based localization state of the art include this about trilateration and multilateration.
+Trilateration and Multilateration
+Trilateration is the process of obtaining the position of a node from its distance to
+three anchors. Three circles are formed based on these distance measurements and
+intersection of them is used to localize the node in space [25]. The centers of these
+circles are at anchor locations and distance measurements from the anchor to blindfolded node determine the circle radius. The trilateration scheme is shown in Figure
+2.2 and more information about trilateration is given in [9]. Being easy to implement
+makes trilateration quite popular with various measurement types, such as RSS, TOA
+and TDOA, but errors are inevitable for each of them. Despite the fact that trilateration gives accurate results with low-noise distance measurements, it is not feasible
+with high-noise measurement errors or with collinearity of three anchors.
+When three anchors do not produce sufficiently good localization results, a possible
+solution is using measurements from multiple neighbor nodes, which is called multilateration [25]. As described in [3], GPS is an example of localization that is based
+on TDOA measurements and multilateration. Usually intersection of distance measurements is not a single point and obtaining position of a node is posed as a Least
+Square Estimation (LSE) problem.
+In the literature, there are several different approaches based on multilateration. In
+[10] a collaborative multilateration algorithm is suggested which facilitates estimation of node locations in multi-hop sensor deployments by known anchor locations
+and distance measurements. With this algorithm, localization of blindfolded nodes
+which cannot communicate directly with anchors is possible. Also collaborative multilateration and iterative multilateration for ad-hoc node deployment is proposed in
+[26]. Iterative multilateration is a distributed algorithm and all nodes in the network
+is capable of running it.
+
+
+Things to change in the report and look out for:
+
+1. Posiible plaigairism from copying.
+2. change or rework on path loss modeling.
+3. 

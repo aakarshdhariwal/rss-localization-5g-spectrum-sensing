@@ -1,0 +1,9 @@
+Possible Questions that could be asked in the mid term defense:
+
+1. Why did we choose the transmitter location based methods instead of spatial statistics based methods? 
+Ans. REM construction technique section from Birkan paper. Geo location database section from base paper.
+
+
+2. What range of bandwidth are we considering right now MHz as in 4G/LTE and then start our localization in static environment , even though the path loss mdel is independednt of the frequecy? 
+
+3. How could the interference affect the performance of the localisation, we consider ideal scenario with intereference in terms of just noise but not from other sources eg sensors, outliers other transmitters etc?
