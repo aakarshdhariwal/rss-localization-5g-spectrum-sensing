@@ -294,6 +294,23 @@ Master's Thesis, Chair of Electrical Smart City Systems
 Supervisors: MSc. Victor Shatov, Prof. Dr.-Ing. Norman Franchi
 Submitted October 2023
 
+## Citation
+
+If you reference this work, please cite it as:
+
+```bibtex
+@mastersthesis{dhariwal2023rss,
+  author = {Dhariwal, Aakarsh},
+  title  = {RSS-based Localization using Distributed Spectrum Sensing for 5G Networks},
+  school = {Friedrich-Alexander-Universit{\"a}t Erlangen-N{\"u}rnberg (FAU)},
+  year   = {2023},
+  url    = {https://github.com/aakarshdhariwal/rss-localization-5g-spectrum-sensing}
+}
+```
+
+Machine-readable citation metadata is also available in
+[`CITATION.cff`](CITATION.cff).
+
 ## License
 
 The author's own code in `code/` (excluding `code/third_party/`) is released under

@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "RSS-based Localization using Distributed Spectrum Sensing for 5G Networks"
+type: software
+authors:
+  - family-names: "Dhariwal"
+    given-names: "Aakarsh"
+    affiliation: "Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)"
+abstract: >-
+  Master's thesis evaluating RSS-based active-transmitter localization (MSE
+  and LIvE methods) and radio environment map (REM) construction from a
+  distributed spectrum-sensing network, extended to a 5G-NR-style OFDM
+  transmit waveform and spatially correlated shadowing. Chair of Electrical
+  Smart City Systems, FAU Erlangen-Nürnberg, supervised by Victor Shatov and
+  Prof. Dr.-Ing. Norman Franchi.
+date-released: "2023-10-01"
+license: MIT
+repository-code: "https://github.com/aakarshdhariwal/rss-localization-5g-spectrum-sensing"
+keywords:
+  - received signal strength
+  - transmitter localization
+  - radio environment map
+  - distributed spectrum sensing
+  - 5G
+  - OFDM
+  - shadowing correlation
+  - wireless sensor networks
