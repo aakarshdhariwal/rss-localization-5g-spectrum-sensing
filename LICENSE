@@ -19,17 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-This MIT license applies to the author's own code in `code/` (excluding
-`code/third_party/`). It does not apply to:
-
-- `code/third_party/` — third-party MATLAB utilities kept under their original
-  authorship; see `code/third_party/NOTICE.md` and
-  `code/third_party/REMEstimate/NOTICE.md`.
-- `report/` — the thesis document and presentation slides, which remain the
-  intellectual property of the author and Friedrich-Alexander-Universität
-  Erlangen-Nürnberg (FAU), included here for portfolio/reference purposes only.
-- `references/` — third-party papers and articles, included for context under
-  their own original copyright; see `references/references.md`.
